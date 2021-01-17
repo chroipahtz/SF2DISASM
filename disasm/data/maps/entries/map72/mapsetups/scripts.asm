@@ -6,10 +6,10 @@ cs_4FFDA:       textCursor 3341
                 newEntity 128,63,63,LEFT,MAPSPRITE_OBJECT4
                 newEntity 129,63,63,LEFT,MAPSPRITE_EFFECT3
                 setActscriptWait ALLY_PETER,eas_Init
-                setActscriptWait FOLLOWER_B,eas_Init
+byte_4FFFE:     setActscriptWait FOLLOWER_B,eas_Init
                 setActscriptWait FOLLOWER_A,eas_Init
                 stopEntity 128
-                stopEntity 129
+byte_50012:     stopEntity 129
                 setActscriptWait 128,eas_DeactivateAutoFacing
                 setActscriptWait 129,eas_DeactivateAutoFacing
                 setCamDest 21,33

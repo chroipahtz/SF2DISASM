@@ -14,6 +14,8 @@ loc_10000C:
                 move.w  #$8C00,d0
                 jsr     (SetVdpReg).w
                 move.w  #$9000,d0
+loc_100020:
+                
                 jsr     (SetVdpReg).w
                 move.w  #$8230,d0
                 jsr     (SetVdpReg).w

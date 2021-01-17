@@ -1486,16 +1486,16 @@ word_59AE:
                 
                 dc.w 0
                 dc.w 0
-                dc.w -$180
-                dc.w -$180
+                dc.w $FE80
+                dc.w $FE80
                 dc.w 0
                 dc.w 0
                 dc.w $180
                 dc.w $180
-                dc.w -$180
-                dc.w -$180
-                dc.w -$180
-                dc.w -$180
+                dc.w $FE80
+                dc.w $FE80
+                dc.w $FE80
+                dc.w $FE80
                 dc.w $180
                 dc.w $180
                 dc.w $180
@@ -1647,6 +1647,8 @@ esc10_setSpeed:
 
 ; =============== S U B R O U T I N E =======================================
 
+; set entity 18-19 values with xxxx
+
 esc11_setAccelerationFactors:
                 
                 move.w  2(a1),ENTITY_OFFSET_XACCEL(a0)
@@ -1657,6 +1659,8 @@ esc11_setAccelerationFactors:
 
 
 ; =============== S U B R O U T I N E =======================================
+
+; set or clear entity value 1C bits 0-1 according to xxxx
 
 esc12_activateAcceleration:
                 
@@ -1685,6 +1689,8 @@ loc_5B08:
 
 
 ; =============== S U B R O U T I N E =======================================
+
+; set or clear entity value 1C bits 2-3 according to xxxx
 
 esc13_activateDeceleration:
                 

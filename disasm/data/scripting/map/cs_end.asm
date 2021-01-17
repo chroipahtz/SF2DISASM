@@ -275,35 +275,35 @@ sub_493EC:
                 animEntityFX ALLY_KIWI,7
                 playSound MUSIC_PROMOTED_ATTACK_LOOP
                 csc_end
-                textCursor 394          ; Unused cutscene with parsing mistake here and below, letting it unformatted.
-                showPortrait $0,ALLY_BOWIE
-                nextTextVar $0,ALLY_BOWIE,$0,$3,$A ; "{NAME} found{N}the {ITEM}.{D1}"
-                nextSingleTextVar $0,ALLY_BOWIE,$0,$4 ; "{NAME} received{N}the {ITEM}."
-                dc.l $14001D
+                dc.b 0, 4, 1, $8A       ; Unused cutscene with parsing mistake here and below, letting it unformatted.
+                dc.b 0, $1D
+                dc.b 0, 3               ; "{NAME} found{N}the {ITEM}.{D1}"
+                dc.b 0, 1               ; "{NAME} received{N}the {ITEM}."
+                dc.l EnemyBattleSprite11+$761
                 dc.l $8078
                 dc.l $1E0004
                 dc.l $1420002
                 dc.l 0
                 dc.l $FFFF
-                dc.l $140501
-                dc.l $150000
-                dc.l $110001
-                dc.l $100020
-                dc.l $120000
-                dc.l $13FFFF
+                dc.l EnemyBattleSprite11+$C45
+                dc.l EnemyBattleSprite22+$712
+                dc.l Background09+$13E5
+                dc.l loc_100020
+                dc.l Background19+$13D8
+                dc.l EnemyBattleSprite11+$743
                 dc.l $40000
                 dc.l $FFFF0000
-                dc.l $50004
+                dc.l byte_4FFFE+6
                 dc.l 1
                 dc.l 5
                 dc.l $40000
                 dc.l 0
-                dc.l $50015
+                dc.l byte_50012+3
                 dc.w $FFFF
-word_494AC:      ac_branch
-                dc.w (eas_Idle-word_494AC) & $FFFF
-                ac_end
-                showPortrait $0,ALLY_BOWIE
-                csWait 60
-                hidePortrait
-                csc_end
+word_494AC:     dc.w $30
+                dc.w loc_51FA+2-word_494AC
+                dc.w $8080
+                dc.b 0, $1D
+                dc.b $80, $3C
+                dc.b 0, $1E
+                dc.w $FFFF
